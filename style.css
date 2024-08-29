@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+
+.nav-logo{
+    width: 3rem;
+    height: 3rem;
+    margin-top: 20%;
+}
+.navbar-brand {
+    font-size: 2.4rem;
+}
+.nav-link:link , .nav-link:visited {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    display: inline-block;
+}
+.nav-link:hover , .nav-link:active {
+    color: #048E7b;
+}
+
+.nav-link.cta {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+}
+
+.nav-link.cta:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    color: white;
+    }
+  
+button.navbar-toggler {
+    border-color: #fff;
+}
+
+
+.logo{
+    width: 20rem;
+    height: 20rem;
+    margin-top: 10%;
+    margin-left: 70%;
+}
+
+.hero-text {
+    font-size: 7rem;
+    line-height: 1;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-text span {
+    font-weight: 400;
+    font-family: "Major Mono Display", monospace;
+    font-size: 5rem;
+}
+
+.hero-text .zen {
+    color: #50C878; /* Emerald green */
+}
+
+.hero-text .dojo {
+    /* color: #e0c388; */
+    color: #E3A8F8;
+}
+  
+@media (max-width: 992px) {
+    html {
+        font-size: 55%;
+    }
+    nav {
+        height: auto;
+        padding: 1rem 0;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+}
