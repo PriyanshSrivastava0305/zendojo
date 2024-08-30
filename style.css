@@ -1,7 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 html {
     scroll-behavior: smooth;
-  }
+}
+
+
+/* Width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #E3A8F8;
+    border-radius: 10px;
+    background-size: 200% 200%;
+    transition: background 4s ease-in-out;
+}
+
+/* Hover effect with gradient animation */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to top, #50C878, #E3A8F8);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    animation: gradientAnimation 4s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: space-between; /* Adjust space between cards */
+}
+
+.project-card {
+    flex: 0 1 calc(50% - 20px); /* 50% width minus some margin */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link:hover .project-card {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.project-card .card-text {
+    font-size: 1rem;
+    color: #cbcbcb;
+}
+
+
+
 
 /* General styles */
 body {
@@ -15,34 +94,54 @@ body {
 .nav-logo {
     width: 3rem;
     height: 3rem;
-    margin-top: 20%;
+    margin-top: 1.5rem;
 }
 
 .navbar-brand {
+    display: flex;
     position: fixed;
+    display: block;
+    align-items: center;
     font-size: 2.4rem;
+    transition: all 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:link, .nav-link:visited {
     color: #fff;
-    font-size: 1rem;
+    display: block;
+    font-size: 1.1rem;
     font-weight: 300;
     display: inline-block;
+    text-decoration: none; /* Ensure no underline by default */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adjusted transition */
 }
 
 .nav-link:hover, .nav-link:active {
     color: #048E7b;
+    display: block;
+    /* transform: scale(1.05); */
 }
 
 .nav-link.cta {
     display: inline-block;
-    padding: 0.5rem 2rem;
+    display: block;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    padding: 0.5rem 2.5rem;
     border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 
 .nav-link.cta:hover {
-    background-color: #000000;
+    border: 1px solid #50C878;
+    border-radius: 10px;
+    display: block;
+    /* background-color: #000000; */
     color: #fff;
+    transform: translateY(-3px);
+    transition: 0.5s ease;
+    /* letter-spacing: 0.05rem; */
+
 }
 
 span.navbar-toggler-icon {
@@ -107,11 +206,26 @@ button.navbar-toggler {
     /* font-weight: bold; */
 }
 
+
+
 .about-text, .project-text, .people-text, .contact-text {
     font-size: 1.5em;
     line-height: 1.6;
     font-weight: 1;
 
+}
+
+.contact-text{
+    text-decoration: none;
+    color: white;
+}
+
+.contact-text:hover{
+    transition: all 0.5s ease;
+    letter-spacing: 1%;
+    transform: 0.5s ease;
+    text-decoration: underline;
+    color: white;
 }
 
 /* Specific sections */
@@ -201,112 +315,237 @@ button.navbar-toggler {
     
 }
 
+/* General Navbar Styles */
+.navbar {
+    background-color: #1f293700; /* Adjust as needed */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
 
-/* Media Queries */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='purple' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Navbar Menu */
+.navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: #1f293700; /* Adjust as needed */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 20;
+}
+
+.navbar-collapse.show {
+    transform: translateX(0);
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-top: 60px; /* Adjust if needed */
+}
+
+.nav-item {
+    margin: 0.5rem 0;
+}
+
+.nav-link {
+    color: #fff;
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #048E7b;
+}
+
+.logo {
+    width: 30rem;
+    height: 30rem;
+    margin-top: 5%;
+    margin-left: 60%;
+}
+
+.hero-text {
+    font-size: 7rem;
+    line-height: 1;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-text span {
+    font-weight: 400;
+    font-family: "Major Mono Display", monospace;
+    font-size: 5rem;
+}
+
+.hero-text .zen {
+    color: #50C878; /* Emerald green */
+}
+
+.hero-text .dojo {
+    color: #E3A8F8;
+}
+
+
+/* Adjustments for Tablets and Smaller Screens */
 @media (max-width: 992px) {
     html {
-        font-size: 55%;
+        font-size: 90%;
     }
+
     .nav-logo {
-        margin-top: 10%;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: 1rem;
     }
+
+    .navbar-brand {
+        font-size: 2rem;
+        /* Position navbar fixed to top but adjust for smaller screens */
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 20; /* Ensure navbar is above other content */
+    }
+
     .hero-text {
-        left: 50px;
         font-size: 5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .hero-text span {
-        font-size: 3.5rem;
-    }
+
     .logo {
         width: 20rem;
         height: 20rem;
-        margin-left: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
+
     .about, .project {
-        margin-left: 10%;
-        width: 80%;
+        margin-left: 5%;
+        width: 90%;
     }
+
     .about-title, .project-title {
         font-size: 2rem;
     }
+
     .about-text, .project-text {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 50%;
+
+    .full-page-section {
+        height: 10vh; /* Reduce height to make sections shorter */
+        padding: 2rem; /* Add padding to avoid content touching edges */
+        border: 2px solid white;
     }
+
+    
+
+    .navbar {
+        display: none;
+    }
+    .navbar-brand {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
     .nav-logo {
-        margin-top: 5%;
+        width: 2rem;
+        height: 2rem;
+
     }
+
     .hero-text {
-        left: 30px;
         font-size: 4rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .hero-text span {
-        font-size: 2.5rem;
-    }
+
     .logo {
         width: 15rem;
         height: 15rem;
-        margin-left: 40%;
+        margin-top: 5rem;
+        margin-left: 8rem;
     }
+
     .about, .project {
-        margin-left: 5%;
-        width: 90%;
+        /* margin: 5% auto; */
+        width: 50%;
+        height: 50vh;
     }
+
     .about-title, .project-title {
         font-size: 1.8rem;
     }
+
     .about-text, .project-text {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 576px) {
-    html {
-        font-size: 45%;
+    .navbar-brand {
+        font-size: 1.6rem;
     }
+
+    .nav-logo {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
     .hero-text {
         font-size: 3.5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .hero-text span {
-        font-size: 2rem;
-    }
+
     .logo {
         width: 12rem;
         height: 12rem;
-        margin-left: 30%;
     }
+
+    .about, .project {
+        margin: 3% auto;
+        width: 95%;
+    }
+
     .about-title, .project-title {
         font-size: 1.5rem;
     }
+
     .about-text, .project-text {
         font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 40%;
-    }
-    .hero-text {
-        font-size: 3rem;
-    }
-    .hero-text span {
-        font-size: 1.8rem;
-    }
-    .logo {
-        width: 10rem;
-        height: 10rem;
-        margin-left: 25%;
-    }
-    .about-title, .project-title {
-        font-size: 1.3rem;
-    }
-    .about-text, .project-text {
-        font-size: 0.7rem;
     }
 }

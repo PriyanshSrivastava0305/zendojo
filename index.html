@@ -9,37 +9,38 @@
 </head>
 <body style="background-color: #393B3D;">
     <header class="bg-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <div class="">
-                    <img src="assets/ZD.svg" alt="Logo" class="nav-logo">
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item px-2">
-                            <a class="nav-link cta text-white" href="#about">About</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link cta text-white" href="#project">Project</a>
-                        </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link cta text-white" href="#people">People</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link cta text-white" aria-current="page" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/ZD.svg" alt="Logo" class="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-2">
+                        <a class="nav-link cta text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link cta text-white" href="#project">Project</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link cta text-white" href="#people">People</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link cta text-white" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <img src="assets/logo.svg" alt="Main Logo" class="logo">
-        <div class="hero-text">
-            <span class="zen">Zen</span><span class="dojo">Dojo</span>
         </div>
-    </header>
+    </nav>
+    <img src="assets/logo.svg" alt="Main Logo" class="logo">
+    <div class="hero-text">
+        <span class="zen">Zen</span><span class="dojo">Dojo</span>
+    </div>
+</header>
+
 
     <section id="about" class="full-page-section">
         <div class="content-container">
@@ -51,11 +52,35 @@
     <section id="project" class="full-page-section">
         <div class="content-container">
             <span class="project-title">Projects</span><br><br><br><br>
-            <span class="project1">Project 1:</span><br><br>
+            <!-- <span class="project1">Project 1:</span><br><br>
             <span style="font-weight: 1;">No-code database solution that simplifies data interaction. Our platform empowers users to input data using natural language, eliminating the need for complex queries. This intuitive approach allows anyone to harness the power of data, with built-in analytics providing deep insights effortlessly. Perfect for Gen Z innovators and beyond, our tool is designed to make data management seamless, accessible, and impactful.</span>
             <br><br><br>
             <span class="project1">Project 2:</span><br><br>
-            <span style="font-weight: 1;"><Main></Main>ulti-agent system dedicated to guiding Gen Z individuals through their career journeys. Our AI-driven platform offers personalized advice, resources, and support, tailored to the unique challenges and aspirations of the new generation. With this tool, navigating career paths becomes intuitive, insightful, and empowering, helping Gen Z to thrive in an ever-evolving professional landscape.</span>
+            <span style="font-weight: 1;"><Main></Main>ulti-agent system dedicated to guiding Gen Z individuals through their career journeys. Our AI-driven platform offers personalized advice, resources, and support, tailored to the unique challenges and aspirations of the new generation. With this tool, navigating career paths becomes intuitive, insightful, and empowering, helping Gen Z to thrive in an ever-evolving professional landscape.</span> -->
+            <div class="project-container">
+                <a href="#" class="project-link">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <br>
+                            <h5 class="card-title">Project 1</h5><br><br>
+                            <p class="card-text">No-code database solution that simplifies data interaction. Our platform empowers users to input data using natural language, eliminating the need for complex queries. This intuitive approach allows anyone to harness the power of data, with built-in analytics providing deep insights effortlessly. Perfect for Gen Z innovators and beyond, our tool is designed to make data management seamless, accessible, and impactful.</p>
+                            <br>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="project-link">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <br>
+                            <h5 class="card-title">Project 2</h5><br><br>
+                            <p class="card-text">Multi-agent system dedicated to guiding Gen Z individuals through their career journeys. Our AI-driven platform offers personalized advice, resources, and support, tailored to the unique challenges and aspirations of the new generation. With this tool, navigating career paths becomes intuitive, insightful, and empowering, helping Gen Z to thrive in an ever-evolving professional landscape.</p>
+                            <br>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                    
+        
         </div>
     </section>
 
@@ -70,7 +95,7 @@
             <div class="row">
                 <!-- Repeat this block for each person -->
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="#" class="person-link">
+                    <a href="https://priyansh-eosin.vercel.app/" class="person-link">
                         <div class="card person-card">
                             <div class="card-body">
                                 <h5 class="card-title">Priyansh Srivastava</h5>
@@ -79,7 +104,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="#" class="person-link">
+                    <a href="https://www.linkedin.com/in/romit-chatterjee-1931b326a/" class="person-link">
                         <div class="card person-card">
                             <div class="card-body">
                                 <h5 class="card-title">Romit Chatterjee</h5>
@@ -88,7 +113,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="#" class="person-link">
+                    <a href="https://www.linkedin.com/in/rishav-kumar-960092255/" class="person-link">
                         <div class="card person-card">
                             <div class="card-body">
                                 <h5 class="card-title">Rishav</h5>
@@ -97,7 +122,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="#" class="person-link">
+                    <a href="https://www.linkedin.com/in/ananya-kriti-21ba012b2/" class="person-link">
                         <div class="card person-card">
                             <div class="card-body">
                                 <h5 class="card-title">Ananya Kriti</h5>
@@ -106,7 +131,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="#" class="person-link">
+                    <a href="https://www.linkedin.com/in/tanisha-m-2a68b71b7/" class="person-link">
                         <div class="card person-card">
                             <div class="card-body">
                                 <h5 class="card-title">Tanisha</h5>
@@ -124,7 +149,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <a href="#" class="person-link">
+                    <a href="https://www.linkedin.com/in/kevin-adesara-33b90a286/" class="person-link">
                         <div class="card person-card">
                             <div class="card-body">
                                 <h5 class="card-title">Kevin Adesara</h5>
@@ -152,7 +177,7 @@
     <section id="contact" class="full-page-section">
         <div class="content-container">
             <span class="contact-title">Contact</span><br><br><br>
-            <span class="contact-text">Interested in collaborating with ZenDojo or learning more about our work? Reach out to us and let's build the future together.</span>
+            <a class="contact-text" href="mailto:priyansh0305@gmail.com"><p>Send us a note on Email </p></a>
         </div>
     </section>
 
